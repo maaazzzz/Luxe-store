@@ -2,7 +2,7 @@
 
 A complete fashion e-commerce frontend built with React, Vite, and React Router.
 
-🔗 **Live demo:** [coming soon — add your Vercel URL here]
+🔗 **Live demo:** [https://luxe-store-maaz.netlify.app/product/1](https://luxe-store-maaz.netlify.app/product/1)
 
 ## Features
 
