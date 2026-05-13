@@ -1,0 +1,116 @@
+.checkout { padding: 40px 0 60px; }
+.checkout-title { font-size: clamp(32px, 5vw, 48px); text-align: center; margin-bottom: 24px; }
+
+.checkout-stepper {
+  display: flex; justify-content: center; gap: 16px;
+  margin-bottom: 48px; flex-wrap: wrap;
+}
+.checkout-step {
+  display: flex; align-items: center; gap: 8px;
+  color: var(--gray-500); font-size: 13px; font-weight: 500;
+}
+.checkout-step-circle {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--gray-100); display: flex;
+  align-items: center; justify-content: center;
+  font-size: 12px; font-weight: 600;
+}
+.checkout-step.active { color: var(--gray-900); }
+.checkout-step.active .checkout-step-circle { background: var(--gradient); color: white; }
+.checkout-step.done .checkout-step-circle { background: var(--success); color: white; }
+
+.checkout-layout {
+  display: grid; grid-template-columns: 1fr 380px; gap: 48px;
+  align-items: start;
+}
+
+.checkout-form { background: white; }
+.checkout-form h3 {
+  font-family: 'Inter', sans-serif; font-size: 18px;
+  font-weight: 600; margin-bottom: 16px;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.checkout-next { width: 100%; margin-top: 16px; }
+.form-actions { display: flex; gap: 12px; margin-top: 16px; }
+.form-actions .btn { flex: 1; }
+
+.shipping-option {
+  display: flex; align-items: center; gap: 16px;
+  padding: 16px; border: 1.5px solid var(--gray-300);
+  border-radius: 12px; cursor: pointer;
+  margin-bottom: 12px; transition: all 0.2s;
+}
+.shipping-option:hover { border-color: var(--gray-900); }
+.shipping-option.active { border-color: var(--primary); background: rgba(236, 72, 153, 0.04); }
+.shipping-option input { accent-color: var(--primary); width: 18px; height: 18px; }
+.shipping-option div { flex: 1; }
+.shipping-option strong { font-size: 14px; }
+.shipping-option p { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+
+.checkout-demo-notice {
+  font-size: 12px; color: var(--accent); background: rgba(245, 158, 11, 0.1);
+  padding: 12px; border-radius: 10px; margin: 16px 0;
+}
+
+/* Summary */
+.checkout-summary {
+  background: var(--gray-50); padding: 24px; border-radius: 16px;
+  position: sticky; top: 88px;
+}
+.checkout-summary h3 {
+  font-family: 'Inter', sans-serif; font-size: 16px;
+  font-weight: 600; margin-bottom: 20px;
+}
+
+.checkout-summary-items {
+  display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;
+  max-height: 320px; overflow-y: auto;
+}
+
+.checkout-summary-item {
+  display: flex; gap: 12px; align-items: center;
+}
+
+.checkout-summary-img { position: relative; }
+.checkout-summary-img img {
+  width: 56px; height: 64px; object-fit: cover;
+  border-radius: 8px; background: var(--gray-100);
+}
+.checkout-summary-qty {
+  position: absolute; top: -6px; right: -6px;
+  background: var(--gray-900); color: white;
+  width: 20px; height: 20px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px; font-weight: 600;
+}
+
+.checkout-summary-info { flex: 1; font-size: 13px; }
+.checkout-summary-info strong { display: block; font-weight: 500; }
+.checkout-summary-info p { font-size: 12px; color: var(--gray-500); margin-top: 2px; }
+
+.checkout-totals {
+  border-top: 1px solid var(--gray-300); padding-top: 16px;
+  display: flex; flex-direction: column; gap: 8px; font-size: 14px;
+}
+.checkout-totals > div { display: flex; justify-content: space-between; color: var(--gray-700); }
+.checkout-grand-total {
+  border-top: 1px solid var(--gray-300); padding-top: 12px; margin-top: 8px;
+  font-size: 18px; font-weight: 600; color: var(--gray-900) !important;
+}
+
+.checkout-success-icon {
+  width: 64px; height: 64px; margin: 0 auto 24px;
+  background: var(--gradient); color: white;
+  border-radius: 50%; display: flex;
+  align-items: center; justify-content: center;
+}
+
+@media (max-width: 1024px) {
+  .checkout-layout { grid-template-columns: 1fr; }
+  .checkout-summary { position: static; }
+}
+@media (max-width: 480px) {
+  .form-row { grid-template-columns: 1fr; gap: 0; }
+}
